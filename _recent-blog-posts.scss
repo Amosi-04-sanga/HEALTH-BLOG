@@ -1,0 +1,114 @@
+// mixins.
+@mixin content-box {
+    background-color: white;
+    box-shadow: 1px 1px 8px 1px grey;
+    border-radius: 1.2rem;
+    width: calc(100% - 8vw);
+    margin: auto;
+    padding: 2rem 1.5rem;
+}
+
+
+main {
+    margin: 3rem 0;
+}
+
+.latest-posts {
+    display: grid;
+    grid-row-gap: 4rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'latest1' 'latest2' 'latest3' 'latest4' 'latest5' 'latest6';
+}
+
+.latest1 {
+    grid-area: latest1;
+}
+.latest2 {
+    grid-area: latest2;
+}
+.latest3 {
+    grid-area: latest3;
+}
+.latest4 {
+    grid-area: latest4;
+}
+.latest5 {
+    grid-area: latest5;
+}
+.latest6 {
+    grid-area: latest6;
+}
+
+.latest1,
+.latest2,
+.latest3,
+.latest4,
+.latest5,
+.latest6 {
+    @include content-box; 
+}
+
+.latest {
+
+
+    &__flex {
+        margin: 0 0 2rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        width: 50%;
+    }
+    
+    &__header-text {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    &__date-text {
+        font-variant: normal;
+        text-transform: capitalize;        
+    }
+    
+    &__font {
+        font-family: cursive;
+    }
+
+    &__opacity-low {
+        opacity: .6;
+    }
+
+    &__italic {
+        font-style: italic;
+    }
+
+    &__parag {
+        text-indent: 22px;
+    }
+
+    &__parag::first-letter {
+        font-size: 1.5em;
+    }
+}
+
+.button {
+    margin: 2rem auto .4rem;
+}
+
+.read-more {
+    all: unset;
+    display: block;
+    background-color: rgb(19, 88, 19);
+    color: white;
+    padding: .5em;
+    text-transform: uppercase;
+    margin: auto;
+    border-radius: .6rem;
+}
+
+.read-more:hover {
+    background-color: rgb(196, 104, 104);
+    color: rgb(19, 88, 19);
+}

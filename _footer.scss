@@ -1,0 +1,46 @@
+footer {
+    background-color: rgb(54, 49, 49);
+    padding: 1.3rem;
+    text-align: center;
+}
+
+.footer {
+
+    &__left, &__middle, &__right {
+       margin: .8rem 0;
+       padding: .2rem;
+    }
+
+    &__header {
+       padding: .6rem 0;
+    }
+
+    &__list {
+        padding: .9rem 0;
+        list-style-type: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-style: oblique;
+        color: white;
+        transition: all .3s ease-in;
+        font-size: .9rem;
+    }
+
+    &__link:hover {
+        color: wheat;
+        padding-left: 2px;
+    }
+
+    &__list-item {
+        padding: .2rem 0;
+    }
+}
+
+.about, .servises, .contacts {
+    text-transform: uppercase;
+    color: greenyellow;
+    letter-spacing: 6px;
+}

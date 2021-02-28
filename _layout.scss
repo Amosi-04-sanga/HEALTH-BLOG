@@ -1,0 +1,97 @@
+// for landscape tablets and laptops
+@media only screen and (min-width: 600px) {
+    
+    .latest-posts {
+        grid-gap: .7rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+         'latest1 latest2'
+         'latest3 latest4'
+         'latest5 latest6';
+    }
+
+    .latest1,
+    .latest2,
+    .latest3,
+    .latest4,
+    .latest5,
+    .latest6 {
+       width: auto;
+       background-color: inherit;
+       box-shadow: 1px 1px 8px 1px rgb(144, 149, 151);
+   }
+
+   main {
+       margin: 3rem 1.2rem;
+   }
+   
+   .old-posts {
+       display: flex;
+       flex-direction: row;
+   }
+   .old__photo {
+       margin-right: 1vw;
+   }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .form {
+
+        &__flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    .fixed-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 25%;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        margin: 2rem 0 5rem;
+    }
+
+    .nav {
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__list-item {
+            margin: 2rem 0 1rem;
+        }
+
+        &__link {
+            border: none;
+        }
+    }
+
+    main, footer, header {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    main, footer {
+        padding: 0 .5rem;
+    }
+
+}
